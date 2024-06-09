@@ -145,51 +145,33 @@
             disable-paste='true'></script>
 </head>
 <body>
-    <div id="myElement"></div>
+   
+<script src="https://content.jwplatform.com/libraries/Z79JsmAO.js"></script>
 
-    <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', function () {
-            fetch('https://proxy.animebash.workers.dev/?u=https://play.denver1769.in/get.php?id=24')
-                .then(response => response.json())
-                .then(data => {
-                    const channelUrl = data.channel__url;
-                    const keyId = data.keyid;
-                    const key = data.key;
-                    
-                    jwplayer("myElement").setup({
-                        autostart: true,
-                        preload: "none",
-                        repeat: true,
-                        volume: 100,
-                        mute: false,
-                        stretching: "exactfit",
-                        width: "100%",
-                        aspectratio: "16:9",
-                        playlist: [
-                            {
-                                sources: [
-                                    {
-                                        default: false,
-                                        type: "mpd",
-                                        file: channelUrl,
-                                        drm: {
-                                            clearkey: {
-                                                key: key,
-                                                keyId: keyId
-                                            }
-                                        },
-                                        label: "Sun tv HD"
-                                    }
-                                ]
-                            }
-                        ],
-                        primary: "html5",
-                        hlshtml: true
-                    });
-                })
-                .catch(error => console.error('Error fetching data:', error));
-        });
-    </script>
+<div id="jwplayerDiv"><div id="my-video"></div></div>
+   
+</div>
+
+<script>
+    // Setup JWPlayer
+    jwplayer("my-video").setup({
+        autostart: false,
+        file: "https://prod-sports-hin-fa.jiocinema.com/bpk-tv/Sports18_1_HD_voot_MOB/Fallback/index.m3u8",
+        image: "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-74232-la6z41u8-v3/imageContent-74232-la6z41u8-m5.png",
+        width: "100%", // Set width to 100%
+        aspectratio: "16:9", // Standard aspect ratio
+        primary: "html",
+       stretching: "",
+       "type": "hls",
+       "autostart": "true",
+       "mute": "false",
+       "primary": "html5",
+       "logo": {
+                   "file": "TB.jpg",
+                   "hide": "false",
+                   "position": "Top-right" }
+                });
+            </script>
 <div id="loading" class="loading">
     <div class="loading-text">
       <span class="loading-text-words">Tamil</span>

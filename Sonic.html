@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Tamil box live</title>
-  <link rel="shortcut icon" type="image/x-icon" href="https://te.legra.ph/file/a8a6eec3142122379ea1e.jpg">
+  <link rel="shortcut icon" type="image/x-icon" href="TB.jpg">
    <style>
     html {
       font-family: Poppins;
@@ -105,6 +105,7 @@
         filter: blur(4px);
       }
     }
+
   </style>
 <style>
   body {
@@ -119,6 +120,16 @@
             min-height: 100%;
            max-height: 100%
          }
+       .logo {
+  position: absolute;
+  top: 77px; /* Adjust the top position as needed */
+  left: 30px; /* Adjust the left position as needed */
+  width: 141px; /* Set the width of the logo */
+  height: 35px; /* Set the height of the logo */
+  background: url('TB.jpg') no-repeat;
+  background-size: contain;
+  z-index: 1; /* Ensure the logo is on top of the iframe */
+}
 </style>
 </head>
 <body>
@@ -149,7 +160,7 @@
 
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function () {
-            fetch('https://proxy.animebash.workers.dev/?u=https://play.denver1769.in/get.php?id=24')
+            fetch('https://proxy.animebash.workers.dev/?u=https://play.denver1769.in/get.php?id=127')
                 .then(response => response.json())
                 .then(data => {
                     const channelUrl = data.channel__url;
@@ -161,7 +172,7 @@
                         preload: "none",
                         repeat: true,
                         volume: 100,
-                        mute: false,
+                        unmute: true,
                         stretching: "exactfit",
                         width: "100%",
                         aspectratio: "16:9",
